@@ -30,5 +30,11 @@ To clone it:
 
 `git checkout [branchname]` Switch to branch
 
+## Template Literals
+Inject variable content into strings:
+```javascript
+const color = 'green';
+console.log(`The light is on ${color}`);
+```
 
  
