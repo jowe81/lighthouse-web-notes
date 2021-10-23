@@ -12,10 +12,6 @@ Pure functions are much easier to test than non-pure functions.
 * accomplish single task
 * pass in parameters (no global variables
 
-## Equals and Type Coercion
+# Equals and Type Coercion
 Always use ===, comparing both type and value.
 The == operator will try to match the types of the expressions on both sides before comparing them, and can result in unintended outcomes.
-
-## Keyboard shortcuts
-* CMD + ~ switches between windows of same app
-* CMD + SHIFT + F Global search in VSCode
