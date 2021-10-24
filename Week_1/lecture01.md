@@ -1,5 +1,5 @@
 ## October 23, 2021
-# Lecture 1
+# Lecture 1 - Overview and the dev workflow
 ## Sandeep
 /letsandeepio
 Works at Xerris, was Asst HR Manager until recently, LHL 2020 grad

@@ -1,3 +1,61 @@
+# Week 1
+#### Oct 22, 2021
+## Git and Gists
+
+Fork: copy of someone's repo or gist
+
+A gist is a small code snippet that only one person can contribute to
+
+To clone it: 
+* copy the SSH URL
+* git clone [URL] local_dir_name
+
+## Markdown
+
+\# Header H1
+
+\###### Header H6
+
+\* Unordered list item
+
+&nbsp;&nbsp;&nbsp;&nbsp;\* Indented unordered list item
+
+\'\'\' javascript [Code block] \'\'\' (backticks)
+
+\'messageText\' format as code (backticks)
+
+## Git and Branches
+
+`git -b [branchname]` Create and checkout new branch
+
+`git checkout [branchname]` Switch to branch
+
+## Template Literals
+Inject variable content into strings:
+```javascript
+const color = 'green';
+console.log(`The light is on ${color}`);
+```
+
+#### October 22, 2021
+# Functions
+
+## Pure function
+A function that has no side-effects (such as printing to the console) and doesn't rely on other functions' side effects (such as global bindings).
+
+Pure functions are much easier to test than non-pure functions.
+
+## Function Rules
+* Start function name with a verb if possible
+* camelCase for Javascript functions
+* indent properly
+* accomplish single task
+* pass in parameters (no global variables
+
+# Equals and Type Coercion
+Always use ===, comparing both type and value.
+The == operator will try to match the types of the expressions on both sides before comparing them, and can result in unintended outcomes. 
+
 # Keyboard shortcuts
 * `CMD + ~` switches between windows of same app
 * `CMD + SHIFT + F` Global search in VSCode
