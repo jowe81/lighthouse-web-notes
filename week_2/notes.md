@@ -1,79 +1,17 @@
-Symbol creates a reference to a string which is guaranteed to be unique.
-
+# Week 2 Notes
+## Closures
 ```javascript
-const sym1 = Symbol('a');
-const sym2 = Symbol('b');
-console.log(sym1 === sym2)
+function wrapValue(n) {
+  let local = n;
+  return () => local;
+}
 
--> false
+let wrap1 = wrapValue(1);
+let wrap2 = wrapValue(2);
+console.log(wrap1());
+// → 1
+console.log(wrap2());
+// → 2
 ```
-### Primitive datatypes
-Often used
-* Strings
-* Boolean
-* Numbers
-* Null/NaN
-* Undefined
+When wrap1 gets assigned wrapValue(1), it is assigned a function that returns the local variable local in wrapValue, at the time of calling set to 1. When wrap() gets executed, it remembers that context/scope.
 
-Rarely used
-* Symbol
-* BigInt
-
-
-### Non primitive datatypes:
-1. Arrays
-2. Objects
-3. Functions
-
-### Declare a BigInt
-```
-let num = 54321n
-```
-### Code Visualization
-pythontutor.com
-
-You can store a function in an array 
-```
-let array = [123, 'abc', true, {}, [], function(){} ];
-```
-
-### Declare an object
-
-```javascript
-const champions = {
-  team: "Raptors",
-  year: 2019,
-  mvp: ["Leonard", "James", "Giannis"],
-  printMvps: function() {
-    const roster = this.mvp;
-    for (const player of roster) {
-      console.log(`MVP: ${player}`);
-    }
-  }
-};
-
-console.log(champions);
-console.log(champions.printMvps());
-```
-
-Omitting quotes on key declarations is fine; JS knows they are always strings
-
-### Accessing object properties
-Bracket notation: most flexible, can pass in variables
-Dot notation: direct key access only, only alpha-numeric characters only, must start with alpha
-
-### Delete a property
-```
-delete obj.prop
-```
-
-or assign null (although that won't remove the property).
-
-### Object types vs primitive types
-Pass by reference vs pass by value
-
-### Looping over objects
-```
-for .. in
-```
-(for .. of / each is for arrays)
