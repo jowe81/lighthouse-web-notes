@@ -91,3 +91,41 @@ That means we always have access to a global ```module``` object in the file tha
 * Inside ```describe``` a series of ```it('should do whatever...', () => {},"did not do whatever);``` statements will contain the test code
 * Leaving an ```it``` statement with just the first parameter will mark the test as pending, effectively allowing the creation of a to-do list for tests
 
+### Node vs browser testing
+
+* Requires slightly different structure of the test file
+```javascript
+// classNameTest.js
+
+var chai = require('chai');
+var assert = chai.assert;
+
+var className = require('../js/className.js');
+var addClass = className.addClass;
+
+// The rest of the file remains the same
+
+describe('addClass', function() {
+  ...
+});
+```
+
+```javascript
+// className.js
+
+module.exports = {
+  addClass: function(el, newClass) {
+    if(el.className.indexOf(newClass) !== -1) {
+      return;
+    }
+
+    if(el.className !== '') {
+      //ensure class names are separated by a space
+      newClass = ' ' + newClass;
+    }
+
+    el.className += newClass;
+  }
+}
+```
+* Article: https://www.sitepoint.com/unit-test-javascript-mocha-chai/
