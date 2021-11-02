@@ -88,7 +88,7 @@ That means we always have access to a global ```module``` object in the file tha
 
 ### Test file example
 * ```describe('moduleName', () => {});``` groups a series of tests
-* Inside ```describe``` a series of ```it('should do whatever...', () => {},"did not do whatever);``` statements will contain the test code
+* Inside ```describe``` a series of ```it('should do whatever...', () => {},"did not do whatever");``` statements will contain the test code
 * Leaving an ```it``` statement with just the first parameter will mark the test as pending, effectively allowing the creation of a to-do list for tests
 
 ### Node vs browser testing
@@ -129,3 +129,24 @@ module.exports = {
 }
 ```
 * Article: https://www.sitepoint.com/unit-test-javascript-mocha-chai/
+
+### NPM
+* --save-dev or -D flag: save to devDependencies (not in production)
+* --no-save: don save as a dependency at all
+* package.json needs test suite in "test" property (mocha) to enable ```npm test```
+
+
+### String methods
+* ```string.replace(search, replacement)```
+* ```string.replaceAll(search, replacement)```
+
+### Regular Expressions
+* ^, $ beginning, end of line
+* \s single white-space character
+* \S single non-white-space character
+* \d digit [0-9]
+* [] character class, eg/ [a-z]
+* [^] negated character class
+* \w word character (alphanumeric)
+* \W not a word character
+* \b word boundary (following or preceding char matches \W )
