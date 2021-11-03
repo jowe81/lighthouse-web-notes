@@ -150,3 +150,46 @@ module.exports = {
 * \w word character (alphanumeric)
 * \W not a word character
 * \b word boundary (following or preceding char matches \W )
+
+## OOP
+* state: an object's static properties?
+* behavior: an object's methods
+* ```this``` inside a method refers to the object the method was called on
+
+### Classes
+* Class name should always be a noun, and capitalized
+* ```class Pizza { }```
+ ```javascript
+pizza1 = new Pizza();
+pizza2 = new Pizza();
+```
+* Constructor function ```constructor()```
+* Use constructor method to set default values/properties/state
+* Adding methods
+```javascript
+class Pizza(){
+
+  methodName(parameters){
+
+  }
+
+}
+```
+
+### Inheritance
+* extend a class with the keyword ```extend```
+```javascript
+
+class subClass extends superClass {
+
+  //superClass's methods and static properties pulled in here when instantiating subClass
+
+  subClassMethod() {
+
+  }
+
+}
+
+```
+* extending classes are called subclasses
+* extended class is the superclass of its subclass
