@@ -193,3 +193,13 @@ class subClass extends superClass {
 ```
 * extending classes are called subclasses
 * extended class is the superclass of its subclass
+
+## More on Recursion
+
+https://medium.com/angular-in-depth/learn-recursion-in-10-minutes-e3262ac08a1
+
+"The unknown number of nested loops is a common characteristic of all problems that are recursive in their nature and should give you a hint that recursive solution is required."
+
+### Tail Call Optimization
+
+If nothing comes after the recursive call, the compiler can optimize the call stack use.
