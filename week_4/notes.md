@@ -117,3 +117,20 @@ Make the regex global /.../g to run a replacer function for each match
   * `g` global flag for global ("match all")
 ### ```str.substr(start,length)```
 Omit length for the rest of the string
+
+## ASync Flow Control
+* Callbacks are common way to handle
+
+## process.stdout
+* Use ```process.stdout.write()``` as an alternative to console.log. Will not print a newline character automatically
+* ```\r``` (carriage return) to go back to the beginning of the line
+
+## Events and process.stdin
+* ```process.stdin``` deals with the standard input (keyboard)
+* Register an event handler for a keystroke with ```process.stdin.on(callback(data))```
+* CTRL + C produces ```\u0003```
+* Use Property Value Shortand to assign stdin/stdout: ```const { stdin: input, stdout:output } = require('process');```
+* ```readline``` is a built-in module that allows reading a line (from any input stream)
+  * ```const rl = require('readline').createInterface({process.input, process.output});```
+  * ```rl.question(string, callback(answer))```
+  * Call ```rl.close()``` to close the interface and relinquish control
