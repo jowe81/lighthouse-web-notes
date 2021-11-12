@@ -7,7 +7,13 @@
 //   }
 // }
 
+// This will work
 const i = (test) => {
   console.log(i)
 };
 i();
+
+//This won't work because it's synchronous (assignment is not completed by the time j is called on)
+const j = ((test) => {
+  console.log(j)
+})();
