@@ -107,5 +107,43 @@ grep -rnw '/path/to/somwhere' -e 'pattern'
 ## Chai assertion 
 * ```assert.isNotEmpty(target)``` ensures target has data. Not undefined, null, not an empty string or empty array.
 
+# Promises
+```javascript
+  function loardImage() {
+    return new Promise((resolve, reject) => {
+      let image = new Image();
+
+      image.onload = () => {
+        resolve(image); //instead of callback(err, image)
+      }
+
+      image.onerror = () => {
+        reject(new Error("message..."));
+      });
+
+      image.src = url;
+    });
+  }
+```
+* Native in ECMA 6
+* ASync function returns promise instance, which has a ```.then``` method
+
+## Promise.all()
+```javascript
+Promise.all([
+  loadImage('image1.jpg'),
+  loadImage('image2.jpg'),
+  loadImage('image3.jpg'),
+]).then((images) => {
+  images.forEach(img => addImg(img.src));
+}).catch((err) => {
+  //handle error
+});
+```
+* executes all functions passed to it (= array of functions) in parallel
+* .then() takes a callback that will receive an array with the returns from the resolved promises
+* Errors will bubble up to the error handler passed to .catch()
+* Promises make async code easier to unit-test (how?)
+
 
 
