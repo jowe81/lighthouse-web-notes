@@ -81,6 +81,7 @@ Think of them as try/catch wrappers around async code.
   * ```/path/:param```: in the request handler, ```param``` will be available at req.params.param
 * Routes should be ordered from most specific to least specific
 * ```res.redirect(URL)```!
+* ```req``` object has ```.socket.remoteAddress``` and ```.remotePort```
 
 # Templates (EJS)
 * files that define presentation separately from logic (javascript separate from HTML)
@@ -120,3 +121,4 @@ Think of them as try/catch wrappers around async code.
 * include headers: ```-i```
 * headers only: ```-I```
 * follow redirect: ```-L```
+
