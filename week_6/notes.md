@@ -62,3 +62,61 @@ Think of them as try/catch wrappers around async code.
 * Bottom line: use UTF-8 always, and
 * Use ```<meta http-equiv="Content-Type" content="text/html; charset=utf-8">``` on EVERY html page
 
+# DNS
+* Record types:
+  * A - IPV4 name
+  * CNAME - canonical name (Alias)
+  * MX - Mail exchange
+  * NS - Name server for zone
+  * AAAA - IPV6 name
+* ```nslookup```
+  * set type = ... (Defaults to A)
+  * example.com
+  * prints out the found records
+
+# Express
+* built on node http module
+* originally Canadian
+* route parameters:
+  * ```/path/:param```: in the request handler, ```param``` will be available at req.params.param
+* Routes should be ordered from most specific to least specific
+* ```res.redirect(URL)```!
+
+# Templates (EJS)
+* files that define presentation separately from logic (javascript separate from HTML)
+* separate different parts of an HTML doc into different files to keep it managable
+* EJS: Embedded JavaScript (template engine)
+* Set templating engine in express: ```app.set('view engine','ejs');```
+* Then use ```res.render('path/to/view');``` to render corresponding view file ```views/path/to/view.ejs```
+* Pass data like so: ```res.render(path,data);```
+* Default views directory is ```views```
+  * Can put ```partials``` and ```pages``` as subdirectories
+* Inside an .ejs template, include _partials_ like so: ``` <%- include('RELATIVE/PATH/TO/FILE'), [data] %>```
+  * Partials have access to all data passed to the main view file
+  * Partials filenames should start with an underscore ```_head.ejs```
+* Execute code without rendering to page: ```<% ... %>```
+* Render a variable: ```<%= variable %>```
+* Loop over data/use control structures: 
+```javascript
+<ul>
+  <% mascots.forEach(function(mascot) { %>
+    <li>
+      <strong><%= mascot.name %></strong>
+      representing <%= mascot.organization %>,
+      born <%= mascot.birth_year %>
+    </li>
+  <% }); %>
+</ul>
+```
+# HTTP verbs and CRUD
+* GET: Read
+* POST: Create
+* PUT: Update
+* DELETE: Delete
+* Safe methods do not modify server state in any way (GET)
+* Idempotent methods do not further modify server state if executed more than once (POST, DELETE)
+
+# cURL
+* include headers: ```-i```
+* headers only: ```-I```
+* follow redirect: ```-L```
