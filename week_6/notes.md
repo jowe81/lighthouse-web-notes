@@ -121,4 +121,20 @@ Think of them as try/catch wrappers around async code.
 * include headers: ```-i```
 * headers only: ```-I```
 * follow redirect: ```-L```
+* indicate http method: ```-X POST```
+* send form data: ```-d username=Carolin```
 
+# Git Branches
+* Create a new branch: ```git branch nameof/branch```
+* HEAD generally points to the most recent commit, but if we checkout a commit instead of a branch, it will point to that commit. Detaching HEAD means to attach it to a commmit instead of a branch.
+* When checking out a commit, only type enough chars of a hash to uniquely identify the commit
+* ```git branch -f bugFix HEAD~2``` will move the bugFix branch to the grandparent commit as seen from the current HEAD
+* ```git reset``` moves back in time (to previous commit), basically rewriting history (as if the latest commit had never happened) 
+* Delete local branch: ```git branch -d <local-branch>```. Force delete with ```-D```
+
+# Cookies
+* key/value pairs
+* Express: ```res.setCookie(key, value, [options])```
+* Express: ```res.clearCookie(key)```
+* Cookies are specific to websites/domains. A website from another domain cannot read or write cookies that don't belong to it
+* [More info](https://stackoverflow.com/questions/1062963/how-do-browser-cookie-domains-wor)
