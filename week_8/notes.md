@@ -64,5 +64,108 @@
 * ```align-self``` like align-items but just for this element
 
 
-  
+## Fonts:
+* fonts.google.com
 
+### em
+* relative to font-size of parent (multiple)
+* if x is the font-size of the parent, then 1em is x
+
+### Font-Awesome and CDNJS
+* Libraries like font-awesome (icons) and others can be tied in viw cdnjs.com
+
+## CSS:
+* ```.parent > .direct_child```
+* ```.parent .all_matching_descendants```
+* ```.parent * ``` (All descendants)
+
+### Pseudo classes 
+* ```selector:hover {}```
+* ```selector:link {}```
+* ```selector:visited {}```
+* ```selector:focus {}```
+* ```selector1, selector2 {}``` define styles for multiple selectors
+
+* ```em``` multiples of element's orig font-size
+* ```rem``` multiples of root element's font-size
+* ```vw```, ```vh``` viewport width/height
+* ```vmin```, ```vmax``` viewport: whichever is greater
+
+### Precendence/ Cascade
+* Categories: inline styles (strongest), IDs, classes, attributes, elements (weakest)
+* Greater specificity trumps lesser specificity
+* In case of identical specificity, the last defined style takes precedence
+* Order:
+  * ```!important``` has greatest precedence but should be avoided
+  * inline style
+  * regular styles be selector specificity and declarataion order on identical spicificity
+
+### Media queries
+* ```@media print {}```
+* ```@media screen and (min-width: 480px...) {}```
+* Media queries can include these features: width, height, device-width, device-height, orientation, aspect-ratio, device-aspect-ratio, color, color-index, monochrome, resolution, scan, grid. Most of these features can be prefixed with min- or max-.
+* Viewport meta: ```<meta name="viewport" content="width=device-width; initial-scale=1.0">```
+
+## Forms
+* POST requests from forms should use ```<form enctype="Content-Type: application/x-www-form-urlencoded">```
+* URL encoded:
+  * Key value pairs ```key=value```, concatenated with ```&```
+  * non-alphanumeric chars are replaced with percent-encoding
+* For search-forms, use ```GET```!
+* Buttons linking elsewhere, even in a form, should use ```<a>``` (which can be styled as a button)
+  
+## CSS Variables
+* declare a variable like this
+```css
+:root {
+  --varName: #abcdef;
+}
+```
+* use it like this
+```css
+selector {
+  color: var(--varName);
+}
+```
+
+## Client Javascript
+* Ways to include: inline, ```<script>``` tag, external script. Avoid inline.
+* ```<link rel="stylesheet" type="text/css" href="" >```
+* Scripts should be at the end of the page; as the browser renders html and executes JS as it progresses through the source (if there was an ```alert()``` in a script at the top of tha page, the page wouldn't render until it's done with)
+
+## DOM interaction with JS only
+* ```document.addEventListener("click", () => {});```
+* ```const div1 = document.getElementById("div-one");```
+* Bunch of events get fired when typing in textarea: ```input```, ```keydown```, ```keypress```, ```keyup```
+* ```keydown```/```keyup``` will get modifier keys (```keypress```, ```input``` will not)
+
+## .bind(): Set JS execution context
+* creates a new function that, when called, has its this keyword set to the provided value (example from mdn docs)
+```javascript
+const module = {
+  x: 42,
+  getX: function() {
+    return this.x;
+  }
+};
+
+const unboundGetX = module.getX;
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);
+console.log(boundGetX());
+// expected output: 42
+```
+
+## Useful Events
+* A bunch about events: https://www.smashingmagazine.com/2013/11/an-introduction-to-dom-events/
+* ```load``` fires on any resource that has finished loading (including dependent resources)
+* ```beforeunload``` fires before browser leaves the page
+* ```error``` fires when a resource fails to load (can respond, e.g. by hiding the resource) _BUT must use inline script here!_
+* ```blur``` Opposite of focus (when element loses focus)
+* ```keyup``` fires AFTER the value (text) in the textarea or input has changed (unlike ```keypress```)
+* ```change``` fires after the element loses focus (not after each keystroke)
+
+# JQuery
+* ```$(form).serialize()``` turns form data into querystring encoded string

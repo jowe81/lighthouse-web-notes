@@ -1,16 +1,19 @@
-# HTTP Cookies/ User Auth: Charlotte
-* ```require('data.json')``` will automatically parse the JSON and return an object
+# Intro to CSS - Charlotte
 
-## Multi-Language page:
+* Review emmets
+  * ```!``` html boiler plate
+  * ```<!``` html comment
+  * ```lorem [tab]``` for lorem text
 
-```javascript
-const dataObject = require('data.json');
+* User Agent stylesheet: default styles from browser; reset with something like normalize.css
 
-app.get('/page', (req, res) => {
-  const language = req.cookies.language;
-  const title = dataObject[language]
-  const content = dataObject[content]
-  const templateVars = { title, content };
-  res.render('page', templateVars);
-});
-```
+* User dashes in class-names, not camelCase
+
+CSS Specificity
+* inline (most specific)
+* ids (#id)
+* classes (.class-name)
+* tags (a, div,...)
+* specificity trumps cascade (order)!
+
+* User border-box, not content-box
