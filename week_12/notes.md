@@ -24,3 +24,16 @@ INSERT INTO first_table [(col1,col2,...colN)]
 ```
 * DELETE FROM table [WHERE...]
 * UPDATE table SET field = value[, field2 = value, ...] [WHERE...]
+
+## PSQL And PG (node-postgress)
+* Commandline psql: ```psql [-h host] [-p port] [-U user] [database]```
+
+# Trees
+* Breadth first traversal (or level order): visit all children before visiting grandchildren
+* Depth first traversal: visit the leaves first (stick-man walks around tree idea)
+* Types of Depth first traversal (binary tree):
+  * pre-order (vist root first)
+  * in-order (left child - root - right child)
+    * in-order traversal of a binary search tree gives you a sorted list
+  * post-order (left child - right child - root)
+
