@@ -67,6 +67,7 @@ https://www.khanacademy.org/computing/computer-programming/sql/relational-querie
 * GROUP BY is mandatory when using aggregate functions (AVG, COUNT, MIN, MAX, SUM)
 * HAVING behaves like WHERE, except it operates on aggregate data (combine with GROUP BY)
 * Aliases can't be used with HAVING, because it is evaluated before the SELECT statement
+* It appears that all columns that appear in SELECT must appear in the GROUP BY clause also, except the aggregate one
 
 ## Foreign Keys
 ```sql
