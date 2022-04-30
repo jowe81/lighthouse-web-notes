@@ -2,6 +2,8 @@
 - Ruby Testing
 - ```gem install rspec```
 
+- https://blog.teamtreehouse.com/an-introduction-to-rspec
+
 ```ruby
 describe Hash do
   before do
