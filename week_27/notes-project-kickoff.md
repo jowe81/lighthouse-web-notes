@@ -1,6 +1,5 @@
 Rules for success
 - Get comfortable being uncomfortable
-
 - Focus on minimum viable demo: 5 min presentation
 - Avoid: "wouldn't it be cool if"
 
