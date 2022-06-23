@@ -1,0 +1,5 @@
+My name is Johannes Weber and I'm a recent LighthouseLabs grad seeking to transition from live and broadcast production to web development. While I haven't worked in the industry before I have been coding for many years and regularly written software, and sometimes designed hardware, to solve problems at work and streamline tasks. I'm passionate about efficiency, optimization, and great audio, and I have a reputation and history of working hard and getting things done.
+I found this job posting through LinkedIn and as a long-time Spotify customer and accomplished musician I'd be excited to work for the company. I strongly believe in lifelong learning and am looking forward to work in a team that is committed to helping each other grow. 
+I readily admit that I am fairly new to React but I love the framework and can't wait to learn more. I have worked with JavaScript for a long time and have had exposure to some other languages, including PHP and Ruby, but am open to learn just about anything.
+Thank you for your time and for considering my application. If you have any questions please do not hesitate to contact me.
+Johannes

@@ -1,0 +1,11 @@
+Exprience Summary
+Junior Full Stack Web Developer transitioning from live event and broadcast production in the church world and local sports. Passionate about streamlining tasks in an efficient and reliable manner and saving time through automation. Take pride in helping others to develop and grow their skills in a team atmosphere.
+
+Cover letter
+
+Dear Kyle Lalani,
+My name is Johannes Weber and I'm a recent LighthouseLabs grad seeking to transition to web development. While I haven't worked in the industry before I have been coding for many years and regularly written software, and sometimes designed hardware, to solve problems at work and streamline tasks. I'm passionate about efficiency and optimization and I have a reputation and history of working hard and getting things done.
+I found Ensemble through LinkedIn and I'm intrigued by your commitment to continual learning and professional development, as well as healthy work-life balance. I love that you are offering the option for a hybrid between remote and in-office work, as I have been doing the same in my current role for the last several years.
+I readily admit that I am fairly new to React but I love the framework and can't wait to learn more.
+Thank you for your time and for considering my application. If you have any questions please do not hesitate to contact me.
+Johannes
