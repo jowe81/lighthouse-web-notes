@@ -1,7 +1,7 @@
 # Deploy Node/Postgres app to HEROKU
 
 - compass.lighthouselabs.ca -> Module 8 Week 21, Deployment
-- Go to heroku.com, create account
+- Go to heroku.com, create account (johannes@jowe.ca)
 - New Application with unique name
 - Resources tab: addon: Heroku Postgres
 - Locally:
