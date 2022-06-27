@@ -1,0 +1,8 @@
+Cover letter
+
+Dear Sir or Madam,
+My name is Johannes Weber and I'm a recent LighthouseLabs grad seeking to transition to web development. I have coded for many years and repeatedly written Node/Express apps to solve problems in my role as Technical Director or streamline tasks.
+I am hoping to further build my expertise in the context of a web development role and would be grateful if you considered my application.
+If you have any questions please do not hesitate to contact me.
+Thank you for your time,
+Johannes
